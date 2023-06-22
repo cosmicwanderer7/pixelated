@@ -1,0 +1,17 @@
+@import url(/colors.css);
+
+body {
+  background-color: var(--background);
+}
+
+.title {
+  color: var(--text);
+  font-size: 7rem;
+  font-family: "Silkscreen", cursive;
+
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
