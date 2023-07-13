@@ -1,17 +1,150 @@
 @import url(/colors.css);
+@font-face {
+  font-family: "pixel";
+  src: url(assets/pixel.ttf);
+}
 
 body {
+  background-image: url(nnnoise.svg);
   background-color: var(--background);
 }
 
 .title {
   color: var(--text);
-  font-size: 7rem;
-  font-family: "Silkscreen", cursive;
-
+  font-size: 6.69rem;
+  font-family: "pixel", cursive;
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 23.4%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  
+}
+
+.sub-title {
+  color: var(--text);
+  font-size: 2.9rem;
+  font-family: "pixel", cursive;
+  position: absolute;
+  top: 50%;
+  left: 19.5%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+
+
+.blur {
+  overflow: hidden;
+  border: 1px solid rgba(0, 128, 0, 0);
+  padding: 1px;
+  margin: 1px;
+  min-height: 97.9vh;
+  backdrop-filter: blur(0.5px);
+}
+
+.blur:hover {
+  backdrop-filter: blur(0px);
+}
+
+img {
+  height: 40%;
+  width: 30%;
+}
+
+.info {
+  float: right;
+  font-family: "Silkscreen", cursive;
+  color: var(--subtext);
+
+  font-size: 24px;
+  position: absolute;
+  top: 42%;
+  right: 6%;
+  transform: translate(0, -40%);
+  padding: 3rem;
+  
+}
+
+.info:hover{
+
+  border-radius:1px;
+  background-color: rgba(0, 0, 0, 0.37);
+  z-index: 3;
+}
+.social {
+  color: #bd93f9;
+  text-decoration: none;
+  padding: 4px;
+}
+
+
+@media only screen and (max-width: 1773px) {
+.title{
+  font-size:5.4rem;
+}
+.sub-title{
+  font-size: 2.39rem;
+}
+  
+.info{
+  font-size: 21px;
+}
+}
+
+
+@media only screen and (max-width: 1392px) {
+.title{
+  font-size:4.6rem;
+    left:23.8%;
+}
+.sub-title{
+  font-size: 2.0rem;
+  left:20%;
+}
+  
+.info{
+  font-size: 18px;
+  top: 43%;
+  right: -1%;
+}
+}
+
+@media only screen and (max-width: 1392px) {
+.title{
+  font-size:4.6rem;
+    left:23.8%;
+}
+.sub-title{
+  font-size: 2.0rem;
+  left:20%;
+}
+  
+.info{
+  font-size: 18px;
+  top: 69%;
+  right: -1%;
+}
+}
+
+@media  screen and (max-width: 1142px) {
+.title{
+  font-size:4.6rem;
+    left:29%;
+}
+.sub-title{
+  font-size: 2.0rem;
+  left:24.5%;
+}
+  
+.info{
+  font-size: 18px;
+  top: 69%;
+  right: -1%;
+}
 }
 
