@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "sabo";
-  src: url("assets/Sabo-Filled.otf") format("opentype");
+  src: url(assets/Sabo-Filled.otf) format("opentype");
 }
 :root {
   --background: #0c0c0e;
