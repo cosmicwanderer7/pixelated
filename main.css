@@ -1,11 +1,13 @@
 @font-face {
   font-family: "pixel";
   src: url(assets/pixel.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: "sabo";
   src: url(assets/Sabo-Filled.otf) format("opentype");
+  font-display: swap;
 }
 :root {
   --background: #0c0c0e;
