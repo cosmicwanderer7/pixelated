@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "sabo";
-  src: url("/assets/Sabo-Filled.otf") format("opentype");
+  src: url("assets/Sabo-Filled.otf") format("opentype");
 }
 :root {
   --background: #0c0c0e;
@@ -14,14 +14,14 @@
 }
 
 body {
-  background-image: url(/assets/nnnoise.svg);
+  background-image: url(assets/nnnoise.svg);
   background-color: var(--background);
 }
 .sec1{
    background-repeat: no-repeat;
    background-position: center;
    z-index: -4;
-   background-image: url( '/assets/svg-shape-1.svg' );
+   background-image: url( 'assets/svg-shape-1.svg' );
    background-image: cross-fade(9px);
 }
 
