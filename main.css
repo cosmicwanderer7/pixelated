@@ -1,3 +1,6 @@
+html{
+  padding: 0.7rem;
+}
 @font-face {
   font-family: "pixel";
   src: url(assets/pixel.ttf);
@@ -25,6 +28,12 @@ body {
    z-index: -4;
    background-image: url(assets/svg-shape-1.svg);
    background-image: cross-fade(9px);
+}
+.dracula{
+  background-image: url(assets/68747470733a2f2f64726163756c617468656d652e636f6d2f7374617469632f69636f6e732f757365642f7061636b2d312f3034352d64726163756c612e737667.svg);
+  height: 70px;
+  width: 70px;
+ 
 }
 
 .blur {
@@ -100,15 +109,18 @@ body {
   word-break: break-word;
 }
 
-
+p{
+  top: 50%;
+  left: 19.5%;
+}
 .info {
   float: right;
   color: var(--subtext);
   font-family: "sabo";
-  font-size: 22px;
+  font-size: 20px;
   position: absolute;
-  top: 41%;
-  right: 6%;
+  top: 44.9%;
+  right: 7%;
   transform: translate(0, -40%);
   padding: 3rem;
   
