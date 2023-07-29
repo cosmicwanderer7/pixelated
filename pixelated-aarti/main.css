@@ -44,7 +44,7 @@ body {
   min-height: 97.9vh;
   filter: blur(30);
   position: relative;
-  animation: breathing 2s ;
+  animation: breathing 3s ;
   opacity: 1;
  color:  #ff79c58f;
 }
@@ -109,9 +109,8 @@ body {
   word-break: break-word;
 }
 
-p{
-  top: 50%;
-  left: 19.5%;
+.bio{
+  font-size: 1px;
 }
 .info {
   float: right;
