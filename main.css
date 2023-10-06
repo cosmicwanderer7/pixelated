@@ -1,30 +1,36 @@
+/* Set padding for all HTML elements */
 html {
   padding: 0.7rem;
 }
 
+/* Define a custom font named "pixel" */
 @font-face {
   font-family: "pixel";
   src: url(assets/pixel.ttf);
   font-display: swap;
 }
 
+/* Define another custom font named "sabo" */
 @font-face {
   font-family: "sabo";
   src: url(assets/Sabo-Filled.otf) format("opentype");
   font-display: swap;
 }
 
+/* Define root level variables for colors */
 :root {
   --background: #0c0c0e;
-  --text: #ff79c5d7;
-  --subtext: #bd93f9;
+  --text: #ff79c5e3;
+  --subtext: #bd93f9bd;
 }
 
+/* Apply background image and color to the body */
 body {
   background-image: url(assets/nnnoise.svg);
   background-color: var(--background);
 }
 
+/* Style for section with class "sec1" */
 .sec1 {
   background-repeat: no-repeat;
   background-position: center;
@@ -33,13 +39,7 @@ body {
   background-image: cross-fade(9px);
 }
 
-.dracula {
-  background-image: url(assets/68747470733a2f2f64726163756c617468656d652e636f6d2f7374617469632f69636f6e732f757365642f7061636b2d312f3034352d64726163756c612e737667.svg);
-  height: 70px;
-  width: 70px;
-
-}
-
+/* Blur effect */
 .blur {
   overflow: hidden;
   border: 1px solid rgba(128, 47, 0, 0);
@@ -48,22 +48,22 @@ body {
   min-height: 97.9vh;
   filter: blur(30);
   position: relative;
-  animation: breathing 2s;
+  animation: breathing 2.4s;
   opacity: 1;
-  color: #ff79c58f;
+  color: #ff79c5ad;
 }
 
-
+/* Keyframes for the breathing animation */
 @keyframes breathing {
   0% {
     filter: blur(10);
-    backdrop-filter: blur(0.9px);
+    backdrop-filter: blur(1px);
     opacity: 0;
   }
 
   40% {
     filter: blur(20px);
-    backdrop-filter: blur(0.7px);
+    backdrop-filter: blur(0.9px);
     opacity: 0;
   }
 
@@ -76,191 +76,77 @@ body {
   100% {
     filter: blur(0);
     backdrop-filter: blur(0.3px);
-    opacity: 1;
-
+    opacity: 0.9;
   }
 }
 
+/* Style for title element */
 .title {
-  color: var(--text);
+  color: var(--subtext);
   font-size: 6.69rem;
   font-family: "pixel", cursive;
   position: absolute;
   top: 40%;
-  left: 23.4%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  white-space: pre-wrap;
-  display: inline-block;
-  word-break: break-word;
 }
 
+/* Style for sub-title element */
 .sub-title {
   color: var(--text);
   font-size: 2.9rem;
   font-family: "pixel", cursive;
   position: absolute;
-  top: 50%;
-  left: 19.5%;
+  top: 51%;
+  left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  white-space: pre-wrap;
-  display: inline-block;
-  word-break: break-word;
 }
 
-p {
-  top: 50%;
-  left: 19.5%;
-}
-
-.info {
-  float: right;
-  color: var(--subtext);
-  font-family: "sabo";
-  font-size: 20px;
+/* Style for description element */
+.description {
+  font-size: 1.4rem;
+  font-family: "sabo", cursive;
   position: absolute;
-  top: 44.9%;
-  right: 7%;
-  transform: translate(0, -40%);
-  padding: 3rem;
-
+  top: 58%;
+  left: 49%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
 
-.social {
-  color: #bd93f9;
-  text-decoration: none;
-  margin-left: 4px;
-}
-
-
-.social:hover {
-  color: #8be9fd;
-}
-
-.scroll {
-  font-size: 4.9rem;
-  position: fixed;
-  top: 165%;
-  right: 20px;
-}
-
-@media only screen and (max-width: 1773px) {
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1362px) {
   .title {
-    font-size: 5.4rem;
+    font-size: 6rem;
   }
 
   .sub-title {
-    font-size: 2.39rem;
+    font-size: 2.5rem;
   }
 
-  .info {
-    font-size: 22px;
-  }
-}
-
-@media only screen and (max-width: 1392px) {
-  .title {
-    font-size: 4.6rem;
-    left: 23.8%;
-  }
-
-  .sub-title {
-    font-size: 2rem;
-    left: 20%;
-  }
-
-  .info {
-    font-size: 21px;
-    top: 43%;
-    right: -1%;
-  }
-}
-
-@media only screen and (max-width: 1392px) {
-  .title {
-    font-size: 4.6rem;
-    left: 23.8%;
-  }
-
-  .sub-title {
-    font-size: 2rem;
-    left: 20%;
-  }
-
-  .info {
-    font-size: 20px;
-    top: 69%;
-    right: -1%;
-  }
-}
-
-@media screen and (max-width: 1142px) {
-  .title {
-    font-size: 4.6rem;
-    left: 29%;
-  }
-
-  .sub-title {
-    font-size: 2rem;
-    left: 24.5%;
-  }
-
-  .info {
-    font-size: 18px;
-    top: 69%;
-    right: -1%;
-  }
-}
-
-@media screen and (max-width: 982px) {
-  .title {
-    /* font-size: 4.3rem;
-    left: 29%; */
-    font-size: 2rem;
-    left: 50%;
-    margin: auto;
-    width: 66%;
-  }
-
-  .sub-title {
+  .description {
     font-size: 1.3rem;
-    left: 50%;
-  }
-
-  .info {
-    top: 69%;
-    right: -1%;
   }
 }
 
-@media screen and (max-width: 878px) {
+/* Additional responsive styles for even smaller screens */
+@media screen and (max-width: 1172px) {
   .title {
-    text-align: center;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 5.7rem;
   }
 
   .sub-title {
-    /* font-size: 1.9rem; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 2.1rem;
   }
 
-  .info {
-    font-size: 14px;
-    /* top: 69%;
-    right: -1%; */
+  .description {
+    font-size: 1.2rem;
   }
-
-
 }
